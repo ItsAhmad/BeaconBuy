@@ -1,0 +1,8 @@
+CREATE TABLE posts (
+  ListingID INT PRIMARY KEY AUTO_INCREMENT,
+  UserID INT,
+  Boat Title VARCHAR(100) NOT NULL,
+  Boat Description TEXT NOT NULL,
+  Boat Price DECIMAL(10, 2),
+  FOREIGN KEY (UserID) REFERENCES Users(UserID)
+)
