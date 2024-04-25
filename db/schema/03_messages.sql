@@ -1,7 +1,7 @@
 CREATE TABLE messages (
-  MessageID INT PRIMARY KEY AUTO_INCREMENT,
-  SenderID INT,
-  OwnerID INT,
-  PostID INT,
+  id SERIAL PRIMARY KEY NOT NULL,
+  senderid INT,
+  ownerid INT,
+  postid INT,
   MessageText TEXT NOT NULL
 )
