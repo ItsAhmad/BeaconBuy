@@ -1,10 +1,10 @@
 -- Drop and recreate Users table (Example)
-
+DROP TABLE if exists users cascade;
 
 CREATE TABLE users (
-  UserID INT PRIMARY KEY AUTO_INCREMENT,
-  Username VARCHAR(50) UNIQUE NOT NULL,
-  Password VARCHAR(100) NOT NULL,
-  Email VARCHAR(100) UNIQUE NOT NULL,
-  Favourites INT PRIMARY KEY AUTO_INCREMENT
+  id SERIAL PRIMARY KEY NOT NULL,
+  username VARCHAR(50) UNIQUE NOT NULL,
+  password VARCHAR(100) NOT NULL,
+  email VARCHAR(100) UNIQUE NOT NULL
+  -- favourites INTEGER REFERENCE  PRIMARY KEY
 );
