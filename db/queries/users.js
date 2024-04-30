@@ -7,11 +7,11 @@ const getUsers = () => {
     });
 };
 
-const getUser = () => {
-  return db.query('SELECT * FROM users where username = ;')
-    .then(data => {
-      return data.rows;
-    });
-};
+// const getUser = () => {
+//   return db.query('SELECT * FROM users where username = ;')
+//     .then(data => {
+//       return data.rows;
+//     });
+// };
 
 module.exports = { getUsers };
