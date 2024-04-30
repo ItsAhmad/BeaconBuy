@@ -12,43 +12,46 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/styles/main.css" />
     <link rel="stylesheet" href="/styles/layout.css" />
+    <link rel="stylesheet" href="/styles/login.css" />
 
     <script src="/vendor/jquery-3.0.0.js"></script>
     <script defer src="/scripts/users.js"></script>
+    <script defer src="/scripts/login.js"></script>
+    <script defer src="/scripts/app.js"></script>
   </head>
 
   <body>
     <%- include('partials/_header') %>
-    <main class="p-3">
+    <main class="login-main">
       <h2>Login</h2>
       <form method="POST" action="/login">
-        <div class="form-group">
-          <label for="username">Username</label>
-          <input
-            class="form-control"
-            type="username"
-            name="username"
-            id="username"
-            aria-describedby="usernameHelp"
-            placeholder="Enter username"
-          />
-        </div>
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input
-            class="form-control"
-            type="password"
-            name="password"
-            id="password"
-            placeholder="Password"
-          />
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <label class="hide" for="username" aria-label="enter username"
+          >Username</label
+        >
+        <input
+          class="form-input"
+          type="username"
+          name="username"
+          id="username"
+          aria-describedby="usernameHelp"
+          placeholder="Enter Username"
+        />
+        <label class="hide" for="password" aria-label="enter password"
+          >Password</label
+        >
+        <input
+          class="form-input"
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Enter Password"
+        />
+        <button type="submit" class="login-btn">Submit</button>
       </form>
     </main>
   </body>
