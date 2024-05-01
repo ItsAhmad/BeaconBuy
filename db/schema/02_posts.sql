@@ -1,3 +1,5 @@
+DROP TABLE if exists posts cascade;
+
 CREATE TABLE posts (
   id SERIAL PRIMARY KEY NOT NULL,
   user_id INTEGER REFERENCES users(id),
