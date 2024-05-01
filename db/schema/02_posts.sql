@@ -4,4 +4,5 @@ CREATE TABLE posts (
   boat_title VARCHAR(100) NOT NULL,
   boat_description TEXT NOT NULL,
   boat_price DECIMAL(10, 2)
+  image_url VARCHAR(255)
 )
