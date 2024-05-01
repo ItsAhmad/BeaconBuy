@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/styles/main.css" />
@@ -21,48 +21,51 @@
     <script src="/vendor/jquery-3.0.0.js"></script>
     <script defer src="/scripts/app.js"></script>
   </head>
+  <body>
+      <!-- Include header -->
+      <% include header.ejs %>
 
-  <!-- Header section with dimmed yacht image and text -->
-  <section class="header-section">
-    <div class="header-image">
-        <img src="\\wsl.localhost\LHL\home\labber\focal\Midterm\BeaconBuy\public\boats\Yacht Image.jpg" alt="Yacht Image">
-        <div class="header-text">
-            <h1>Navigate Luxury</h1>
-        </div>
-    </div>
-</section>
+      <!-- Header section with dimmed yacht image and text -->
+      <section class="header-section">
+          <div class="header-image">
+              <img src="\\wsl.localhost\LHL\home\labber\focal\Midterm\BeaconBuy\public\boats\Yacht Image.jpg" alt="Yacht Image">
+              <div class="header-text">
+                  <h1>Navigate Luxury</h1>
+              </div>
+          </div>
+      </section>
 
-<!-- About section -->
-<section class="about-section">
-    <div class="container">
-        <h2>About BeaconBuy</h2>
-        <p>Introducing BeaconBuy, the premier online marketplace for yacht enthusiasts worldwide. With BeaconBuy, navigating the seas of yacht buying and selling has never been easier. Our user-friendly platform connects buyers and sellers seamlessly, offering a diverse range of luxury yachts to suit every taste and budget. From sleek and modern cruisers to classic and elegant vessels, BeaconBuy ensures that your dream yacht is just a click away. Trust BeaconBuy to be your guiding light in the world of yachting, where every transaction is secure, transparent, and tailored to meet your needs.</p>
-    </div>
-</section>
+      <!-- About section -->
+      <section class="about-section">
+          <div class="container">
+              <h2>About BeaconBuy</h2>
+              <p>Introducing BeaconBuy, the premier online marketplace for yacht enthusiasts worldwide. With BeaconBuy, navigating the seas of yacht buying and selling has never been easier. Our user-friendly platform connects buyers and sellers seamlessly, offering a diverse range of luxury yachts to suit every taste and budget. From sleek and modern cruisers to classic and elegant vessels, BeaconBuy ensures that your dream yacht is just a click away. Trust BeaconBuy to be your guiding light in the world of yachting, where every transaction is secure, transparent, and tailored to meet your needs.</p>
+          </div>
+      </section>
 
-<!-- Yacht listings section -->
-<section class="yacht-listings">
-    <div class="container">
-        <h2>Featured Yachts</h2>
-        <div class="yacht-grid">
-            <!-- Loop through and display each yacht listing -->
-            <?php foreach ($yachts as $yacht): ?>
-                <div class="yacht-card">
-                    <img src="<?php echo $yacht['image_url']; ?>" alt="<?php echo $yacht['boat_title']; ?>">
-                    <h3><?php echo $yacht['boat_title']; ?></h3>
-                    <p><?php echo $yacht['boat_description']; ?></p>
-                    <p>Price: $<?php echo number_format($yacht['boat_price'], 2); ?></p>
-                </div>
-            <?php endforeach; ?>
-        </div>
-    </div>
-</section>
+      <!-- Yacht listings section -->
+      <section class="yacht-listings">
+          <div class="container">
+              <h2>Featured Yachts</h2>
+              <div class="yacht-grid">
+                  <!-- Loop through and display each yacht listing -->
+                  <% yachts.forEach(function(yacht) { %>
+                      <div class="yacht-card">
+                          <img src="<%= yacht.image_url %>" alt="<%= yacht.boat_title %>">
+                          <h3><%= yacht.boat_title %></h3>
+                          <p><%= yacht.boat_description %></p>
+                          <p>Price: $<%= yacht.boat_price.toFixed(2) %></p>
+                      </div>
+                  <% }); %>
+              </div>
+          </div>
+      </section>
 
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <p>&copy; 2024 BeaconBuy. All rights reserved.</p>
-    </div>
-</footer>
-</body>
-</html>
+      <!-- Footer -->
+      <footer>
+          <div class="container">
+              <p>&copy; 2024 BeaconBuy. All rights reserved.</p>
+          </div>
+      </footer>
+  </body>
+  </html>

@@ -1,0 +1,46 @@
+header {
+  width: 100%;
+  padding: 0px 30px;
+  border-bottom: 2px solid black;
+}
+
+.header-elements {
+  margin: 0 auto;
+  max-width: 1180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-icon {
+  width: 150px;
+}
+
+.logo-wordmark {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+}
+
+.logo-wordmark h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin: 10px 10px 0;
+}
+
+.logo-wordmark h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 400;
+  margin: 0 10px 10px;
+  letter-spacing: 0.8px;
+}
+
+.submit-btn,
+.login-btn {
+  font-size: 1em;
+  background: linear-gradient(to top, rgb(102, 174, 236), rgb(71, 206, 255));
+  border: 1px solid #000;
+  border-radius: 25px;
+  outline: none;
+  padding: 10px 20px;
+}
