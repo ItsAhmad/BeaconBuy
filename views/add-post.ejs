@@ -35,26 +35,33 @@
         enctype="multipart/form-data"
       >
         <label for="boat_title">Boat Title:</label>
-        <input type="text" id="boat_title" />
+        <input type="text" id="boat_title" name="boat_title" />
         <label for="boat_description">Boat Description:</label>
         <textarea
           name="boat_description"
           id="boat_description"
           maxlength="500"
         ></textarea>
-        <label for="boat_price">Boat Price:</label>
-        <input type="number" id="boat_price" min="0" max="1000000000" />
-        <!-- <p class="file-upload-label">Boat Image (png or jpg):</p> -->
+        <label for="boat_price">Boat Price ($CAD):</label>
+        <input
+          type="number"
+          name="boat_price"
+          id="boat_price"
+          min="0"
+          max="1000000000"
+        />
         <input
           class="file-input"
           type="file"
-          id="boat_image"
+          id="img_upload"
+          name="image"
           accept=".png, .jpg, .jpeg"
           placeholder="boat image"
         />
-        <label for="boat_image">Choose an image file (png or jpg):</label>
+        <label for="img_upload">Choose an image file (png or jpg):</label>
         <button class="submit-btn add-post-submit" type="submit">Submit</button>
       </form>
     </main>
+    <script defer src="/routes/add-post.js"></script>
   </body>
 </html>

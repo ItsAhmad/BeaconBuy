@@ -38,7 +38,7 @@ app.use(express.static('public'));
 // Note: Feel free to replace the example routes below with your own
 const userApiRoutes = require('./routes/users-api');
 const loginApiRoutes = require('./routes/login-api');
-const addPostApiRoutes = require("./routes/add-post-api");
+// const addPostApiRoutes = require("./routes/add-post-api");
 const widgetApiRoutes = require('./routes/widgets-api');
 const usersRoutes = require('./routes/users');
 const loginRoutes = require('./routes/login');
@@ -50,7 +50,7 @@ const addPostRoutes = require("./routes/add-post");
 // Note: Endpoints that return data (eg. JSON) usually start with `/api`
 app.use('/api/users', userApiRoutes);
 app.use('/api/login', loginApiRoutes);
-app.use('/api/add-post', addPostApiRoutes);
+// app.use('/api/add-post', addPostApiRoutes);
 app.use('/api/widgets', widgetApiRoutes);
 app.use('/users', usersRoutes);
 app.use('/login', loginRoutes);
