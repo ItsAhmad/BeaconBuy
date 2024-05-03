@@ -9,38 +9,51 @@ header {
   max-width: 1180px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
+  padding-bottom: 30px;
 }
+
+h1 {
+  margin-right: 10px;
+  font-family: "Italiana", serif;
+  font-size: 2.7em;
+  font-weight: 900;
+  text-align: left;
+  margin: 10px 0px 0;
+}
+
+h1 a {
+  color: #000 !important;
+  text-decoration: none;
+}
+
 .logo-icon {
-  width: 150px;
+  width: 136px;
 }
 
-.logo-wordmark {
-  font-family: "Playfair Display", serif;
-  text-align: center;
-}
-
-.logo-wordmark h1 {
-  font-size: 2.5em;
-  font-weight: 700;
-  margin: 10px 10px 0;
-}
-
-.logo-wordmark h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 1em;
+.logo-tagline h2 {
+  font-family: "Roboto", serif;
+  font-size: 1.1em;
   font-style: italic;
-  font-weight: 400;
-  margin: 0 10px 10px;
-  letter-spacing: 0.8px;
+  font-weight: 300;
+  margin: 0px;
+}
+
+.header-btns {
+  display: flex;
+  align-items: flex-end;
+}
+
+.submit-btn {
+  margin-left: 10px;
 }
 
 .submit-btn,
 .login-btn {
   font-size: 1em;
   background: linear-gradient(to top, rgb(102, 174, 236), rgb(71, 206, 255));
-  border: 1px solid #000;
-  border-radius: 25px;
+  border: 2px solid #000;
+  border-radius: 4px;
   outline: none;
   padding: 10px 20px;
 }
