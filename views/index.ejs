@@ -23,12 +23,12 @@
   </head>
   <body>
       <!-- Include header -->
-      <% include header.ejs %>
+      <% include partials/_header.ejs %>
 
       <!-- Header section with dimmed yacht image and text -->
       <section class="header-section">
           <div class="header-image">
-              <img src="\\wsl.localhost\LHL\home\labber\focal\Midterm\BeaconBuy\public\boats\Yacht Image.jpg" alt="Yacht Image">
+              <img src="..\public\boats\yacht_image.jpg" alt="Feature Yacht">
               <div class="header-text">
                   <h1>Navigate Luxury</h1>
               </div>
@@ -49,12 +49,12 @@
               <h2>Featured Yachts</h2>
               <div class="yacht-grid">
                   <!-- Loop through and display each yacht listing -->
-                  <% yachts.forEach(function(yacht) { %>
+                  <% posts.forEach(function(post) { %>
                       <div class="yacht-card">
-                          <img src="<%= yacht.image_url %>" alt="<%= yacht.boat_title %>">
-                          <h3><%= yacht.boat_title %></h3>
-                          <p><%= yacht.boat_description %></p>
-                          <p>Price: $<%= yacht.boat_price.toFixed(2) %></p>
+                          <img src="../public/boats/<%= post.image_url %>" alt="<%= post.boat_title %>">
+                          <h3><%= post.boat_title %></h3>
+                          <p><%= post.boat_description %></p>
+                          <p>Price: $<%= post.boat_price.toFixed(2) %></p>
                       </div>
                   <% }); %>
               </div>
@@ -64,7 +64,7 @@
       <!-- Footer -->
       <footer>
           <div class="container">
-              <p>&copy; 2024 BeaconBuy. All rights reserved.</p>
+              <p>&copy; 2024 BeaconBuy. Call us at 1-800-BEACON1.</p>
           </div>
       </footer>
   </body>

@@ -1,5 +1,3 @@
-/* styles.scss */
-
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +13,7 @@
 /* Header styles */
 .header-section {
   position: relative;
-  height: 400px; /* Adjust as needed */
+  height: 400px;
 }
 
 .header-image {
@@ -28,7 +26,7 @@
 .header-image img {
   width: 100%;
   height: auto;
-  filter: brightness(50%); 
+  filter: brightness(50%);
 }
 
 .header-text {
