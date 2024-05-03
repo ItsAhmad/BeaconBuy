@@ -40,12 +40,17 @@
         </div>
 
         <% if (!userData) { %>
-        <form class="login" action="/login" method="GET">
-          <button type="submit" class="submit-btn">Log In</button>
-        </form>
+        <nav class="header-btns">
+          <form class="add-post" action="/add-post" method="GET">
+            <button type="submit" class="submit-btn">Add Post</button>
+          </form>
+          <form class="login" action="/login" method="GET">
+            <button type="submit" class="submit-btn">Log In</button>
+          </form>
+        </nav>
         <% } else { %>
         <nav class="header-btns">
-          <form class="new-listing" action="/new-listing" method="GET">
+          <form class="add-post-btn" action="/add-post" method="GET">
             <button type="submit" class="submit-btn">Add Post</button>
           </form>
           <form class="logout" action="/logout" method="POST">

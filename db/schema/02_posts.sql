@@ -5,5 +5,6 @@ CREATE TABLE posts (
   user_id INTEGER REFERENCES users(id),
   boat_title VARCHAR(100) NOT NULL,
   boat_description TEXT NOT NULL,
-  boat_price DECIMAL(10, 2)
+  boat_price DECIMAL(10, 2),
+  image_url VARCHAR(255)
 )
