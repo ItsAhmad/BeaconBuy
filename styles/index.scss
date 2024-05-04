@@ -62,43 +62,38 @@
 }
 
 /* Yacht listings styles */
-.yacht-listings {
-  padding: 50px 0;
-}
-
-.yacht-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.yacht-card {
+.yacht-post {
   border: 1px solid #ccc;
   border-radius: 5px;
-  overflow: hidden;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: calc(25% - 20px); /* Adjust width to fit 4 posts evenly with padding */
+  margin: 10px; /* Add spacing between posts */
+  float: left; /* Float the posts to make them appear horizontally */
 }
 
-.yacht-card img {
+.yacht-post img {
   width: 100%;
   height: auto;
+  border-radius: 5px;
 }
 
-.yacht-card h3 {
-  padding: 10px;
-  font-size: 18px;
-  font-weight: bold;
+.post-details {
+  padding-top: 10px;
 }
 
-.yacht-card p {
-  padding: 0 10px 10px;
+.post-details h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.post-details p {
   font-size: 14px;
-  line-height: 1.5;
+  margin-bottom: 5px;
 }
 
 /* Footer styles */
 footer {
+  clear: both;
   background-color: #333;
   color: #fff;
   padding: 20px 0;
