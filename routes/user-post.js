@@ -6,10 +6,18 @@
  */
 
 const express = require('express');
-const router  = express.Router();
+const router = express.Router();
+const db = require("../db/connection");
 
 router.get('/', (req, res) => {
-  res.render('users');
+  const userData = req.headers.cookie;
+  console.log(req.session.id)
+
+  const templateVars = {
+    userData,
+    // id : req.session.id
+  };
+  res.render('user-post', templateVars);
 });
 
 module.exports = router;
