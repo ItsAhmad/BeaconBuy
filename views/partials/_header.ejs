@@ -11,10 +11,8 @@
     <link rel="stylesheet" href="/vendor/border-box.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Italiana&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
 
@@ -30,25 +28,36 @@
   <body>
     <header>
       <div class="header-elements">
-        <img
-          class="logo-icon"
-          src="assets/bblogo_icon.png"
-          alt="Beacon Buy Logo | Navigate Luxury"
-        />
-        <!-- <img
-          class="logo-wordmark"
-          src="assets/bblogo_fullmark.png"
-          alt="Beacon Buy Logo | Navigate Luxury"
-        /> -->
-        <div class="logo-wordmark">
-          <h1>BeaconBuy</h1>
+        <h1><a href="/">BeaconBuy</a></h1>
+
+        <div class="logo-tagline">
+          <img
+            class="logo-icon"
+            src="assets/bblogo_icon.png"
+            alt="Beacon Buy Logo | Navigate Luxury"
+          />
           <h2>Navigate Luxury</h2>
         </div>
-        <nav class="nav-login">
+
+        <% if (!userData) { %>
+        <nav class="header-btns">
+          <form class="add-post" action="/add-post" method="GET">
+            <button type="submit" class="submit-btn">Add Post</button>
+          </form>
           <form class="login" action="/login" method="GET">
             <button type="submit" class="submit-btn">Log In</button>
           </form>
         </nav>
+        <% } else { %>
+        <nav class="header-btns">
+          <form class="add-post-btn" action="/add-post" method="GET">
+            <button type="submit" class="submit-btn">Add Post</button>
+          </form>
+          <form class="logout" action="/logout" method="POST">
+            <button type="submit" class="submit-btn">Log Out</button>
+          </form>
+        </nav>
+        <% } %>
       </div>
     </header>
   </body>

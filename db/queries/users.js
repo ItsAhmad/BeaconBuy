@@ -1,17 +1,10 @@
 const db = require('../connection');
 
-const getUsers = () => {
-  return db.query('SELECT * FROM users;')
+const getUserByUserData = (userData) => {
+  return db.query('SELECT * FROM users WHERE username = $1 AND password = $2;', [userData.username, userData.password])
     .then(data => {
       return data.rows;
     });
 };
 
-// const getUser = () => {
-//   return db.query('SELECT * FROM users where username = ;')
-//     .then(data => {
-//       return data.rows;
-//     });
-// };
-
-module.exports = { getUsers };
+module.exports = { getUserByUserData };

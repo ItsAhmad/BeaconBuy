@@ -1,3 +1,5 @@
+DROP TABLE if exists messages cascade;
+
 CREATE TABLE messages (
   id SERIAL PRIMARY KEY NOT NULL,
   senderid INT,
