@@ -45,6 +45,7 @@ const loginRoutes = require('./routes/login');
 const logoutRoutes = require('./routes/logout');
 const addPostRoutes = require("./routes/add-post");
 const indexRouter = require('./routes/index');
+const post1Route = require('./routes/post1');
 
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
@@ -57,6 +58,7 @@ app.use('/login', loginRoutes);
 app.use('/logout', logoutRoutes);
 app.use('/add-post', addPostRoutes);
 app.use('/', indexRouter);
+app.use('/post/1', post1Route);
 // Note: mount other resources here, using the same pattern above
 
 // Home page

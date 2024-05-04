@@ -49,7 +49,8 @@ router.post("/", upload.single("image"), (req, res) => {
   db.query(query1, [user_id, boat_title, boat_description, boat_price, image_url])
     .then((data) => {
       req.session.id = data.rows[0].id;
-      return res.send(image_url);
+      res.redirect("/user-post");
+      //return res.send(image_url);
     })
     .catch((err) => {
       return res.status(500).send(err);
