@@ -7,16 +7,38 @@
 }
 
 h2 {
+  font-style: italic;
   text-align: center;
+  font-family: "Roboto", sans-serif;
 }
 
 .post-details {
   margin-top: 20px;
 }
 
+.img-border {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px;
+}
+
 .post-details img {
+  width: 100%;
   max-width: 100%; /* Ensure the image doesn't exceed the container width */
-  height: auto; /* Maintain aspect ratio */
+  height: 450px; /* Maintain aspect ratio */
   display: block; /* Ensure the image is centered within its container */
-  margin: 0 auto; /* Center the image horizontally */
+  margin: 0; /* Center the image horizontally */
+}
+
+.post-details a {
+  color: black;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.user-name {
+  font-weight: bold;
+  font-style: italic;
 }
