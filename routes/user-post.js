@@ -14,8 +14,7 @@ router.get('/', (req, res) => {
   console.log(req.session.id)
 
   const templateVars = {
-    userData,
-    // id : req.session.id
+    userData
   };
   res.render('user-post', templateVars);
 });
