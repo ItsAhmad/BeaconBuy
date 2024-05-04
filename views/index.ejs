@@ -16,7 +16,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/styles/main.css" />
-    <link rel="stylesheet" href="/styles/layout.css" />
+    <link rel="stylesheet" href="/styles/index.css" />
 
     <script src="/vendor/jquery-3.0.0.js"></script>
     <script defer src="/scripts/app.js"></script>
@@ -28,7 +28,7 @@
       <!-- Header section with dimmed yacht image and text -->
       <section class="header-section">
           <div class="header-image">
-              <img src="..\public\boats\yacht_image.jpg" alt="Feature Yacht">
+              <img src="https://th.bing.com/th/id/R.3e3ddb6be1a33e662c7c13285796f05d?rik=Lj9WFzF4AdiWdA&riu=http%3a%2f%2fmb.cision.com%2fPublic%2f4617%2f9528502%2f9a95ae41eb2b5835_org.jpg&ehk=FfpKOl9qqqNLghuJsJsjCBZ9xX9WusBicMSYW%2bpqAeI%3d&risl=&pid=ImgRaw&r=0" alt="Feature Yacht">
               <div class="header-text">
                   <h1>Navigate Luxury</h1>
               </div>
@@ -43,23 +43,7 @@
           </div>
       </section>
 
-      <!-- Yacht listings section -->
-      <section class="yacht-listings">
-          <div class="container">
-              <h2>Featured Yachts</h2>
-              <div class="yacht-grid">
-                  <!-- Loop through and display each yacht listing -->
-                  <% posts.forEach(function(post) { %>
-                      <div class="yacht-card">
-                          <img src="../public/boats/<%= post.image_url %>" alt="<%= post.boat_title %>">
-                          <h3><%= post.boat_title %></h3>
-                          <p><%= post.boat_description %></p>
-                          <p>Price: $<%= post.boat_price.toFixed(2) %></p>
-                      </div>
-                  <% }); %>
-              </div>
-          </div>
-      </section>
+
 
       <!-- Footer -->
       <footer>
